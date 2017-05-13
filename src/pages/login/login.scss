@@ -1,0 +1,53 @@
+page-login {
+    font-family: 'Montserrat' !important;
+    .login-content {
+        background-color: #1775ff;
+        background-image: -webkit-linear-gradient(332deg, #1775ff, #31dbd2 98%);
+        background-image: linear-gradient(118deg, #1775ff, #31dbd2 98%);
+        .logo-row {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+        .login-box {
+            /*padding: 20px 20px 0px 20px;*/
+            margin-top: 30px;
+        }
+        ion-row {
+            align-items: center;
+            text-align: center;
+        }
+        ion-item {
+            border-radius: 50px !important;
+            padding-left: 30px !important;
+            margin-bottom: 20px;
+            border-bottom: 0px !important;
+            box-shadow: none !important;
+            color: #ffffff;
+        }
+        ion-input {
+            font-size: .9em !important;
+        }
+        .signup-col {
+            /*margin: 0px 16px 0px 16px;*/
+            padding-bottom: 2em;
+        }
+        .item-ios {
+            background-color: rgba(255, 255, 255, .10) !important;
+            box-shadow: none !important;
+            color: #ffffff;
+        }
+        .submit-btn {
+            background-color: #237cfd;
+            border-radius: 50px !important;
+            color: #ffffff;
+        }
+        .register-btn {
+            color: #ffffff;
+            font-size: .9em;
+        }
+        .list-ios[inset] {
+            margin: 16px 0px 0px 0px;
+            border-radius: 4px;
+        }
+    }
+}
