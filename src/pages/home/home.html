@@ -1,21 +1,20 @@
 <ion-header>
     <ion-navbar color="dark">
         <ion-title>
-            Member Area
+            {{title}}
         </ion-title>
         <ion-buttons end>
             <button ion-button (click)="logout()">
-        <ion-icon name="log-out"></ion-icon>
-      </button>
+                <ion-icon name="log-out"></ion-icon>
+            </button>
         </ion-buttons>
     </ion-navbar>
 </ion-header>
-
 <ion-content class="home-content" padding>
-    <ion-tabs>
-        <ion-tab tabIcon="contact" [root]="tab1"></ion-tab>
-        <ion-tab tabIcon="compass" [root]="tab2"></ion-tab>
-        <ion-tab tabIcon="analytics" [root]="tab3"></ion-tab>
-        <ion-tab tabIcon="settings" [root]="tab4"></ion-tab>
+    <ion-tabs color="primary">
+        <ion-tab tabIcon="people" [root]="contacts"></ion-tab>
+        <ion-tab tabIcon="mail" [root]="messages"></ion-tab>
+        <ion-tab tabIcon="radio" [root]="card"></ion-tab>
+        <ion-tab tabIcon="options" [root]="settings"></ion-tab>
     </ion-tabs>
 </ion-content>

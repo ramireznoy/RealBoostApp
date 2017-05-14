@@ -14,14 +14,14 @@
 // automatically applied to the <body> element in the app.
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 .text-input::-moz-placeholder {
-    color: white;
+    color: #eeeeee;
 }
 
 .text-input:-ms-input-placeholder {
-    color: white;
+    color: #eeeeee;
 }
 
 .text-input::-webkit-input-placeholder {
     text-indent: 0;
-    color: white;
+    color: #eeeeee;
 }

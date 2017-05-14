@@ -11,7 +11,7 @@ import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
 @IonicPage()
 @Component({
   selector: 'page-login',
-  templateUrl: 'login.html',
+  templateUrl: 'login.html'
 })
 export class LoginPage {
   loading: Loading;
@@ -29,6 +29,9 @@ export class LoginPage {
     this.showLoading();
     this.auth.login(this.registerCredentials).subscribe(allowed => {
       if (allowed) {
+        localStorage.setItem('name', this.auth.getUserInfo().name);
+        localStorage.setItem('username', this.auth.getUserInfo().username);
+        localStorage.setItem('email', this.auth.getUserInfo().email);
         this.nav.setRoot('HomePage');
       } else {
         this.showError("Access Denied (from login)");

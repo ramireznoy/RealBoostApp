@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-/*import { Tab1 } from "./tabs/tab1-page";
-import { Tab2 } from "./tabs/tab2-page";
-import { Tab3 } from "./tabs/tab3-page";
-import { Tab4 } from "./tabs/tab4-page";*/
+import { Events } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -15,22 +12,27 @@ export class HomePage {
   name = '';
   username = '';
   email = '';
+  title = '';
 
-  tab1: any;
-  tab2: any;
-  tab3: any;
-  tab4: any;
+  contacts: any;
+  messages: any;
+  card: any;
+  settings: any;
 
-  constructor(private nav: NavController, private auth: AuthServiceProvider) {
+  constructor(private nav: NavController, private auth: AuthServiceProvider, public events: Events) {
     let info = this.auth.getUserInfo();
     this.name = info['name'];
     this.username = info['username'];
     this.email = info['email'];
 
-    /*this.tab1 = Tab1;
-    this.tab2 = Tab2;
-    this.tab3 = Tab3;
-    this.tab4 = Tab4;*/
+    this.contacts = 'ContactsPage';
+    this.messages = 'MessagesPage';
+    this.card = 'CardPage';
+    this.settings = 'SettingsPage';
+
+    events.subscribe('tab:selected', (title) => {
+      this.title = title;
+    });
   }
  
   public logout() {
