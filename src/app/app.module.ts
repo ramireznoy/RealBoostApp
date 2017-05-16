@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { ContactsProvider } from '../providers/contacts/contacts';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthServiceProvider
+    AuthServiceProvider,
+    ContactsProvider
   ]
 })
 export class AppModule {}
