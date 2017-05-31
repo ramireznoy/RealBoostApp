@@ -8,7 +8,7 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
-import { ContactsProvider } from '../providers/contacts/contacts';
+import { BoostProvider } from '../providers/boost/boost';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { ContactsProvider } from '../providers/contacts/contacts';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider,
-    ContactsProvider
+    BoostProvider
   ]
 })
 export class AppModule {}

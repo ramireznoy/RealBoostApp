@@ -1,3 +1,8 @@
 page-card {
-
+    ion-card-content p {
+        font-size: .8em;
+    }
+    ion-col.logo-actions {
+        text-align: center;
+    }
 }

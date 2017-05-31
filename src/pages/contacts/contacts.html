@@ -14,15 +14,16 @@
                         <img src="{{contact.picture.thumbnail}}">
                     </ion-avatar>
                     <h2>{{contact.name.first}} {{contact.name.last}}</h2>
+                    <p>{{contact.login.sha1}} {{contact.login.sha256}}</p>
                 </ion-item>
                 <ion-item-options side="left">
                     <button ion-button color="primary">
                   <ion-icon name="call"></ion-icon>
-                  Call
+                  &nbsp;Call&nbsp;
                 </button>
                     <button ion-button color="secondary">
                   <ion-icon name="text"></ion-icon>
-                  Text
+                  &nbsp;Chat&nbsp;
                 </button>
                     <button ion-button color="light">
                   <ion-icon name="mail"></ion-icon>

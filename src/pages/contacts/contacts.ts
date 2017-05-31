@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Events } from 'ionic-angular';
 
-import { ContactsProvider } from '../../providers/contacts/contacts';
+import { BoostProvider } from '../../providers/boost/boost';
 
 /**
  * Generated class for the ContactsPage page.
@@ -14,7 +14,7 @@ import { ContactsProvider } from '../../providers/contacts/contacts';
 @Component({
   selector: 'page-contacts',
   templateUrl: 'contacts.html',
-  providers: [ContactsProvider]
+  providers: [BoostProvider]
 })
 export class ContactsPage {
   name: string;
@@ -22,7 +22,7 @@ export class ContactsPage {
   email: string;
   contacts: any;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events, public contactsProvider: ContactsProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events, public boostProvider: BoostProvider) {
     this.name = localStorage.getItem('name');
     this.username = localStorage.getItem('username');
     this.email = localStorage.getItem('email');
@@ -34,7 +34,7 @@ export class ContactsPage {
   }
 
   loadContacts(){
-    this.contactsProvider.load()
+    this.boostProvider.loadContacts()
     .then(data => {
       this.contacts = data;
     });

@@ -1,3 +1,19 @@
 page-messages {
-
+    .list-ios .item-block .item-inner {
+        border: none;
+    }
+    ion-item-sliding .item {
+        border-bottom: 0.55px solid #c8c7cc;
+    }
+    .item-ios p {
+        margin-top: .7em;
+        margin-bottom: .7em;
+        font-size: .7em;
+    }
+    ion-item-options .button-inner {
+        font-size: .8em;
+    }
+    ion-item-options .button-inner ion-icon {
+        font-size: 2em;
+    }
 }
